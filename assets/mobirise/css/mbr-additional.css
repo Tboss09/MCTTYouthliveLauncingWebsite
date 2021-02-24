@@ -1161,7 +1161,7 @@ section.lazy-placeholder:after {
 .cid-spGXxAsy7u {
   padding-top: 6rem;
   padding-bottom: 0rem;
-  background-color: #eae9f1;
+  background-color: #fff;
 }
 .cid-spGXxAsy7u img,
 .cid-spGXxAsy7u .item-img {
@@ -1181,7 +1181,7 @@ section.lazy-placeholder:after {
 .cid-spGXxAsy7u .item-wrapper {
   position: relative;
   border-radius: 4px;
-  background: #eae8f1;
+  background: #eae8f16b;
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -1218,7 +1218,7 @@ section.lazy-placeholder:after {
 .cid-spMXhoIp7F {
   padding-top: 0rem;
   padding-bottom: 5rem;
-  background-color: #eae8f1;
+  background-color: #fff;
 }
 .cid-spMXhoIp7F .mbr-section-btn {
   justify-content: space-between;
