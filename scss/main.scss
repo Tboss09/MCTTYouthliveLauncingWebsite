@@ -1,6 +1,7 @@
-body{
-    overflow-x:hidden; 
+body {
+    overflow-x: hidden;
 }
+
 // Blog Btn
 .blogBtn {
     text-align: right;
@@ -10,7 +11,8 @@ body{
         transition: 0.4s background-color;
         padding: 15px 20px;
 
-        &:focus {
+        &:focus,
+        &:hover {
             background: #29166f2f;
             transition: 0.4s background-color;
         }
@@ -21,6 +23,7 @@ body{
 
 // ABout Us
 .aboutUs {
+
     &-link {
         font-weight: 500;
         padding: 15px 20px;
@@ -34,5 +37,55 @@ body{
 
 }
 
+.aboutBtn {
+    text-align: left;
+
+    &-link {
+        font-weight: 400;
+        padding: 0px !important;
+        transition: 0.2s background-color;
+
+    }
+}
+
+// For THe Slider Gallery
+.slick {
+    &-arrow {
+        background: #2A166F;
+        z-index: 1000;
+        padding: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+            font-family: inherit !important;
+        }
+
+        &:hover,
+        &:focus {
+            background: #2A166F;
+        }
+    }
+
+    // Left Arrow
+    &-prev {
+        left: 5px;
+    }
+
+    &-next {
+        right: 5px;
+    }
+}
+
+.gallery {
+    max-width: 100% !important;
+}
+
+// For The ScrollToTopPad
+
+
+
 // Mobile
 @import './mobile';
+

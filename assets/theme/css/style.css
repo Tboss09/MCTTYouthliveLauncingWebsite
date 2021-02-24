@@ -518,6 +518,8 @@ blockquote {
 }
 
 /*! Scroll to top arrow */
+
+/* 
 #scrollToTop a i:before {
   content: '';
   position: absolute;
@@ -526,9 +528,10 @@ blockquote {
   background: #fff;
   width: 2px;
   left: calc(50% - 1px);
-}
+} */
 
-#scrollToTop a i:after {
+ 
+/* #scrollToTop a i:after {
   content: '';
   position: absolute;
   display: block;
@@ -540,7 +543,7 @@ blockquote {
   bottom: 30%;
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
-}
+} */
 
 .mbr-arrow-up {
   bottom: 25px;
@@ -583,7 +586,7 @@ blockquote {
 }
 
 .mbr-arrow-up-icon::before {
-  content: '\203a';
+  content: '';
   display: inline-block;
   font-family: serif;
   font-size: 32px;
