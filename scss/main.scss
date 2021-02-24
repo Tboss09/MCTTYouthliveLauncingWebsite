@@ -2,6 +2,10 @@ body {
     overflow-x: hidden;
 }
 
+.menu {
+    z-index: 9999 !important;
+}
+
 // Blog Btn
 .blogBtn {
     text-align: right;
@@ -88,4 +92,3 @@ body {
 
 // Mobile
 @import './mobile';
-

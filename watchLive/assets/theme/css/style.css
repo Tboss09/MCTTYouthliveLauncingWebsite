@@ -584,7 +584,7 @@ blockquote {
   display: block;
   color: #fff;
 }
-
+/* 
 .mbr-arrow-up-icon::before {
   content: '\203a';
   display: inline-block;
@@ -597,7 +597,7 @@ blockquote {
   left: -4px;
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
-}
+} */
 
 /*! Arrow Down */
 .mbr-arrow {
