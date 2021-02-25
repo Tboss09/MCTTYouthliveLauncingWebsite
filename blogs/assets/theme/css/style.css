@@ -578,11 +578,11 @@ blockquote {
 .mbr-arrow-up a i {
   line-height: 60px;
 }
-
+/* 
 .mbr-arrow-up-icon {
   display: block;
   color: #fff;
-}
+} */
 /* 
 .mbr-arrow-up-icon::before {
   content: '\203a';
