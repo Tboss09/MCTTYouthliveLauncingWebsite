@@ -72,7 +72,7 @@ const showBlogs = (function () {
 
                         <div class="item-content">
                             <h5 class="item-title mbr-fonts-style display-5">
-                                <a href="${fileName !== 'blogs.html' ? './blogs/' : ''}blog.html?id=${blog.id}" class="text-primary">
+                                <a href="${fileName !== 'blogs.html' ? '../blogs/' : ''}blog.html?id=${blog.id}" class="text-primary">
                                     ${blog.title}
                                     
                                 </a>

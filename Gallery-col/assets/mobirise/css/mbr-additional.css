@@ -997,7 +997,7 @@ section.lazy-placeholder:after {
 .cid-sphRl3dYUn .item-img {
   width: 100%;
   height: 100%;
-  height: 500px;
+  height: 350px;
   object-fit: cover;
 }
 .cid-sphRl3dYUn .item:focus,
@@ -1486,7 +1486,7 @@ section.lazy-placeholder:after {
 .cid-sphVhZ8BP5 {
   padding-top: 120px;
   padding-bottom: 120px;
-  background-image: url("../../../assets/images/image-0-compressed-1-576x324.jpg");
+  /* background-image: url("../../../assets/images/image-0-compressed-1-576x324.jpg"); */
 }
 .cid-sphWp7y5EJ {
   padding-top: 90px;
