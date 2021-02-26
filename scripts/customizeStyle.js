@@ -84,7 +84,7 @@ const showBlogs = (function () {
 
                             <p class="mbr-text mbr-fonts-style mt-3 display-7">
                             ${blog.body.slice(0, 100)}
-                                <a href="${fileName !== 'blogs.html' ? '../blogs/' || './blogs/' : ''}blog.html?id=${blog.id}" class="text-primary"> Read more....</a>
+                                <a href="${fileName !== 'blogs.html' ? '../blogs/' : ''}blog.html?id=${blog.id}" class="text-primary"> Read more....</a>
                                     </p>
                         </div>
                     </div>
@@ -174,20 +174,23 @@ if (fileName == 'live.html') {
 
 
 
+// Back Button
+const backButton = (function () {
+    const allButton =
+        document.querySelectorAll(".btn");
+
+    allButton.forEach(btn => {
+        if (btn.innerHTML === "Back") {
+
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                history.back();
+            });
+            console.log(btn);
+            return;
+        }
+    });
+})()
 
 
-const allButton =
-    document.querySelectorAll(".btn");
-
-allButton.forEach(btn => {
-    if (btn.innerHTML === "Back") {
-
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            history.back();
-        });
-        console.log(btn);
-        return;
-    }
-});
     // countDownToSundayTimer()

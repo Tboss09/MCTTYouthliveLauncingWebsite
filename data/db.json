@@ -35,7 +35,95 @@
     ],
     "gallery": [
         {
-            "id": 1
+            "id": 1,
+            "title": "Easter Festive Season",
+            "alt": "Easter Festive Season Images",
+            "pageTitle": "easter-festive-images",
+            "dateOfEvent": "This Event Took Place on the 27th of July 2018",
+            "img": "image-2-compressed-1600x1200-800x600.jpeg",
+            "images": [
+                "image-1-compressed-720x478-720x478.jpg",
+                "image-2-compressed-1-720x478-720x478.jpg",
+                "image-2-compressed-1600x1200-800x600.jpeg",
+                "image-3-compressed-720x478-720x478.jpg",
+                "image-4-compressed-720x478-720x478.jpg",
+                "image-5-compressed-1-720x478-720x478.jpg",
+                "image-6-compressed-1-720x478-720x478.jpg",
+                "image-8-compressed-1-720x478-720x478.jpg",
+                "fb-img-1532661265970-720x478-720x478.jpg",
+                "image-9-compressed-1-720x478-720x478-720x478.jpg",
+                "fb-img-1532661219676-720x478-720x478.jpg",
+                "image-0-compressed-2000x1500-800x600.jpg",
+                "image-1-compressed-2000x1500-800x450.jpeg",
+                "image-2-compressed-2000x1500-800x600.jpg",
+                "image-3-compressed-2000x1500-800x600.jpg",
+                "image-4-compressed-2000x1500-800x600.jpg",
+                "image-0-compressed-1-1600x1200-800x600.jpg",
+                "image-2-compressed-2-720x478-720x478.jpg",
+                "image-6-compressed-2-720x478-576x324.jpeg",
+                "image-8-compressed-2-720x478-720x478.jpg"
+            ],
+            "carousel": [
+                "image-1-compressed-720x478.jpg",
+                "image-2-compressed-1-720x478.jpg",
+                "image-2-compressed-1600x1200.jpeg",
+                "image-3-compressed-720x478.jpg",
+                "image-4-compressed-720x478.jpg",
+                "image-5-compressed-1-720x478.jpg",
+                "image-6-compressed-1-720x478.jpg",
+                "image-8-compressed-1-720x478.jpg",
+                "fb-img-1532661265970-720x478.jpg",
+                "image-9-compressed-1-720x478-720x478.jpg",
+                "fb-img-1532661219676-720x478.jpg",
+                "image-0-compressed-2000x1500.jpg",
+                "image-1-compressed-2000x1500.jpg",
+                "image-2-compressed-2000x1500.jpg",
+                "image-3-compressed-2000x1500.jpg",
+                "image-4-compressed-2000x1500.jpg",
+                "image-0-compressed-1-1600x1200.jpg",
+                "image-2-compressed-2-720x478.jpg",
+                "image-6-compressed-2-720x478.jpeg",
+                "image-8-compressed-2-720x478.jpg"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "2019 Youth harvest",
+            "img": "img-20190916-wa0027-731x920.jpg",
+            "images": [
+                "ImageTwo",
+                "EasterThree",
+                "Four",
+                "five",
+                "Six",
+                "Seven"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Girls Brigade",
+            "img": "img-20191124-142414-9-3120x4160.jpg",
+            "images": [
+                "ImageTwo",
+                "EasterThree",
+                "Four",
+                "five",
+                "Six",
+                "Seven"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Others",
+            "img": "image-0-compressed-2-720x405.jpg",
+            "images": [
+                "ImageTwo",
+                "EasterThree",
+                "Four",
+                "five",
+                "Six",
+                "Seven"
+            ]
         }
     ]
 }
