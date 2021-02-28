@@ -22,7 +22,7 @@ const imageCollection = async () => {
 
         // carouselTemplate += `
         //     <div  class="carousel-item" >
-        //         <img src="assets/images/${img}"
+        //         <img src="https://cdn.statically.io/gh/Tboss09/mcttImages/bcc113aa/${img}"
         //             alt="${res.alt}">
         //                             </div>`
 
