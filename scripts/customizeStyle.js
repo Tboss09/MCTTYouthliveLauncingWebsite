@@ -79,7 +79,7 @@ const showBlogs = (function () {
                             </h5>
 
                             <h6 class="item-subtitle mbr-fonts-style mt-1 display-7">
-                                <small> ${blog.author}<em> ${blog.date}</em> </small>
+                                ${blog.author}<em></em> <small> ${blog.date} </small>
                             </h6>
 
                             <p class="mbr-text mbr-fonts-style mt-3 display-7">
@@ -111,12 +111,13 @@ if (fileName == 'live.html') {
     let ticker;
 
     let youTubeVideoLiveEverySunday = document.querySelector('.js-youtube-video');
+    let videoCountdownLiveEverySunday = document.querySelector('.liveEverySundayCountdown');
 
 
     function getSeconds() {
         let nowDate = new Date();
         let dy = 0; //Sunday through Saturday, 0 to 6        
-        var counterTime = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate(), 08, 00, 00); //20 out of 24 hours = 8pm
+        var counterTime = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate(), 04, 53, 00); //20 out of 24 hours = 8pm
         let curTime = nowDate.getTime(); //current time
         let atime = counterTime.getTime(); //countdown time
         let diff = parseInt((atime - curTime) / 1000);
@@ -137,13 +138,15 @@ if (fileName == 'live.html') {
         let secs = secTime;
         if (secs >= 0) {
             secTime--;
-            youTubeVideoLiveEverySunday.style.display = 'none';
+            youTubeVideoLiveEverySunday.style.display = 'block';
+            videoCountdownLiveEverySunday.style.display = 'none';
         }
-
+        
         else {
             clearInterval(ticker);
-
+            
             youTubeVideoLiveEverySunday.style.display = 'block';
+            videoCountdownLiveEverySunday.style.display = 'none';
             // console.log('hello,Are you there eee');
             getSeconds(); //start over
         }

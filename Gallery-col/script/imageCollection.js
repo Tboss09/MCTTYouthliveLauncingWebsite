@@ -1,50 +1,41 @@
 const id = new URLSearchParams(window.location.search).get('id');
 
-const imageCollection = (async () => {
-    const singleCollection = await fetch(`http://localhost:3000/gallery/${id}`)
-    let res = await singleCollection.json();
-    let allImagesCollection = res['images'];
-    let bodyTemplate; // This is the Body Image Template
-    const imageCollectionHeader = document.querySelector('.js-image-gallery-header'); //Image Collection Header 
-    const imageCollectionBody = document.querySelector('.js-galleryImages'); //Image Collection Body
+const imageCollection = async () => {
+    const singleGalleryCollection = await fetch(`http://localhost:3000/gallery/${id}`)
+    let res = await singleGalleryCollection.json();
+    let imageBody = document.querySelector('.js-image-body')
+    let singleImageCollection = res["images"];
+    let bodyTemplate = '';
+    let carouselTemplate = '';
 
-    let headerTemplate = `
+    const carouselInner = document.querySelector('.js-carousel-inner');
 
-    <section class="mbr-section content5 cid-sphVhZ8BP5 mbr-parallax-background" id="content5-n"
-        style="background-image: url('../assets/images/${res["images"][3]}');">
-        <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(42, 22, 111);">
-        </div>
+    // console.log(singleImageCollection);
 
-        <div class="container">
-            <div class="media-container-row js-image-gallery-header">
-                <div class="title col-12 col-md-8">
-                    <h2 class="align-center mbr-bold mbr-white pb-3 mbr-fonts-style display-2">${res.title}</h2>
-                    <h3 class="mbr-section-subtitle align-center mbr-light mbr-white pb-3 mbr-fonts-style display-5">
-                        ${res.dateOfEvent}</h3>
-
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    `
-
-    allImagesCollection.map((img, index) => {
+    singleImageCollection.forEach((img, index) => {
         bodyTemplate += `
-            <div class="mbr-gallery-item mbr-gallery-item--p2" data-video-url="false"
-                data-tags="Awesome">
-                <div href="#lb-gallery3-p" data-slide-to="${index}" data-toggle="modal">
-                <img src="assets/images/${img}" alt="${res.alt}">
-                    <span class="icon-focus"></span></div>
-        </div>
+        <div class="mbr-gallery-item mbr-gallery-item--p2">
+        <div href="#lb-gallery3-p" data-slide-to="${index}" data-toggle="modal"><img
+            src="https://cdn.statically.io/gh/Tboss09/mcttImages/bcc113aa/${img}" width= "290px" height="100%" alt="${res.alt}"
+            title=""><span class="icon-focus"></span></div></div> 
         `
 
-        
-        imageCollectionBody.innerHTML = bodyTemplate; // This prints out the images 
-    });
+        // carouselTemplate += `
+        //     <div  class="carousel-item" >
+        //         <img src="assets/images/${img}"
+        //             alt="${res.alt}">
+        //                             </div>`
 
-    imageCollectionHeader.innerHTML = headerTemplate;
-})
-window.addEventListener("DOMContentLoaded", imageCollection)
+
+        // carouselInner.innerHTML = carouselTemplate;
+        // console.log(carouselInner.innerHTML);
+        imageBody.innerHTML = bodyTemplate;
+    })
+
+
+    //    
+
+
+}
+
+window.addEventListener("DOMContentLoaded", () => imageCollection());

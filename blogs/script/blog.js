@@ -15,8 +15,10 @@ const renderDetails = async () => {
     //blog Body
     const bodyTemplate =
 
-        `<h3 class="mbr-section-title mbr-fonts-style mb-2 display-7"><small>By ${blog.author}</small>
-                    <br> ${blog.author}</h3>
+        `<h3 class="mbr-section-title mbr-fonts-style mb-2 display-7">
+        <em>By ${blog.author}</em>
+                    <br> <small>${blog.date}</small></h3>
+                    <br>
                     <p class="mbr-text mbr-fonts-style display-7">${blog.body}<br></p>
                 `
 

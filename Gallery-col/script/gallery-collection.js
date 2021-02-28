@@ -1,17 +1,17 @@
-let allImageCollection = (async () => {
+let allImageCollection = ((async () => {
     let fetchDataCollectionFromServer = await fetch('http://localhost:3000/gallery');// This fetches the data from the server (data/db.json) hosted on github
     let data = await fetchDataCollectionFromServer.json();// This parses it and turns it to a Javascript Object making it available to use
     let template = '';// This would output the data into the dom Element
     let collectionContainer = document.querySelector('.js-collection-container');
     const idx = Math.floor(Math.random() * data[0]["images"].length); //create random 
 
-    
+
     data.forEach(elem => {// for each item in data element, do this
         template += `
 <div class="item features-image сol-12 col-md-6 col-lg-4">
                     <div class="item-wrapper">
                         <div class="item-img">
-                            <a href="easter-festive.html?id=${elem.id}"><img src="assets/images/${elem["images"][idx]}"
+                            <a href="easter-festive.html?id=${elem.id}"><img src="https://cdn.statically.io/gh/Tboss09/mcttImages/bcc113aa/${elem["images"][idx]}"
                                     alt="${elem.alt}" title="" data-slide-to="1"></a>
                         </div>
                         <div class="item-content">
@@ -24,5 +24,4 @@ let allImageCollection = (async () => {
                 </div>`
         collectionContainer.innerHTML = template;
     });
-})
-window.addEventListener('DOMContentLoaded', () => allImageCollection());
+}))();
