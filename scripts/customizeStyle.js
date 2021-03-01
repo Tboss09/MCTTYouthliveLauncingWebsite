@@ -47,53 +47,54 @@ let slickJs = (function () {
 // Show Blogs
 const showBlogs = (function () {
     const blogsTemplate = async () => {
-        const data = await fetch('http://localhost:3000/blogs');
+        const data = await fetch('https://api.jsonbin.io/v3/603c13ee9342196a6a6a2fa9/0/latest');
         const blogs = await data.json();
         const blogsContainer = document.querySelector('.blog-container')
+        
+        console.log(blogs);
         // To show the blogs Out
-
-        let template = ``;
+        // let template = ``;
         // To Show the blogs Out
 
-        let url = window.location.pathname;
-        let fileName = url.substring(url.lastIndexOf('/') + 1);
+        // let url = window.location.pathname;
+        // let fileName = url.substring(url.lastIndexOf('/') + 1);
 
-        if (fileName !== "blogs.html") {
-            blogs.length = 3;
-        }
+        // if (fileName !== "blogs.html") {
+        //     blogs.length = 3;
+        // }
 
-        blogs.forEach(blog => {
-            template += `
-                <div class="item features-image сol-12 col-md-6 col-lg-4">
-                    <div class="item-wrapper">
-                        <div class="item-img">
-                            <img src="${fileName !== 'index.html' ? '../' : './'}${blog.img}" alt="MCTT Church Images ">
-                        </div>
+        // blogs.forEach(blog => {
+        //     template += `
+        //         <div class="item features-image сol-12 col-md-6 col-lg-4">
+        //             <div class="item-wrapper">
+        //                 <div class="item-img">
+        //                     <img src="${fileName !== 'index.html' ? '../' : './'}${blog.img}" alt="MCTT Church Images ">
+        //                 </div>
 
-                        <div class="item-content">
-                            <h5 class="item-title mbr-fonts-style display-5">
-                                <a href="${fileName !== 'blogs.html' ? '../blogs/' : ''}blog.html?id=${blog.id}" class="text-primary">
-                                    ${blog.title}
-                                    
-                                </a>
-                            </h5>
+        //                 <div class="item-content">
+        //                     <h5 class="item-title mbr-fonts-style display-5">
+        //                         <a href="${fileName !== 'blogs.html' ? '../blogs/' : ''}blog.html?id=${blog.id}" class="text-primary">
+        //                             ${blog.title}
 
-                            <h6 class="item-subtitle mbr-fonts-style mt-1 display-7">
-                                ${blog.author}<em></em> <small> ${blog.date} </small>
-                            </h6>
+        //                         </a>
+        //                     </h5>
 
-                            <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            ${blog.body.slice(0, 100)}
-                                <a href="${fileName !== 'blogs.html' ? '../blogs/' : ''}blog.html?id=${blog.id}" class="text-primary"> Read more....</a>
-                                    </p>
-                        </div>
-                    </div>
-                </div> 
-            `
-            // Log The Blog From The Server Side
-        });
+        //                     <h6 class="item-subtitle mbr-fonts-style mt-1 display-7">
+        //                         ${blog.author}<em></em> <small> ${blog.date} </small>
+        //                     </h6>
 
-        blogsContainer.innerHTML = template;
+        //                     <p class="mbr-text mbr-fonts-style mt-3 display-7">
+        //                     ${blog.body.slice(0, 100)}
+        //                         <a href="${fileName !== 'blogs.html' ? '../blogs/' : ''}blog.html?id=${blog.id}" class="text-primary"> Read more....</a>
+        //                             </p>
+        //                 </div>
+        //             </div>
+        //         </div> 
+        //     `
+        //     // Log The Blog From The Server Side
+        // });
+
+        // blogsContainer.innerHTML = template;
 
     }
     window.addEventListener("DOMContentLoaded", () => blogsTemplate());
@@ -141,10 +142,10 @@ if (fileName == 'live.html') {
             youTubeVideoLiveEverySunday.style.display = 'block';
             videoCountdownLiveEverySunday.style.display = 'none';
         }
-        
+
         else {
             clearInterval(ticker);
-            
+
             youTubeVideoLiveEverySunday.style.display = 'block';
             videoCountdownLiveEverySunday.style.display = 'none';
             // console.log('hello,Are you there eee');

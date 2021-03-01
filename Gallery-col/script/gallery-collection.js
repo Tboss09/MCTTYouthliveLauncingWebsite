@@ -1,5 +1,5 @@
 let allImageCollection = ((async () => {
-    let fetchDataCollectionFromServer = await fetch('http://localhost:3000/gallery');// This fetches the data from the server (data/db.json) hosted on github
+    let fetchDataCollectionFromServer = await fetch('https://my-json-server.typicode.com/Tboss09/mcttYouthData/gallery');// This fetches the data from the server (data/db.json) hosted on github
     let data = await fetchDataCollectionFromServer.json();// This parses it and turns it to a Javascript Object making it available to use
     let template = '';// This would output the data into the dom Element
     let collectionContainer = document.querySelector('.js-collection-container');

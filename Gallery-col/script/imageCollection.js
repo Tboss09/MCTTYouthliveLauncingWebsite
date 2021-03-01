@@ -1,7 +1,7 @@
 const id = new URLSearchParams(window.location.search).get('id');
 
 const imageCollection = async () => {
-    const singleGalleryCollection = await fetch(`http://localhost:3000/gallery/${id}`)
+    const singleGalleryCollection = await fetch(`https://my-json-server.typicode.com/Tboss09/mcttYouthData/gallery/${id}`)
     let res = await singleGalleryCollection.json();
     let imageBody = document.querySelector('.js-image-body')
     let singleImageCollection = res["images"];

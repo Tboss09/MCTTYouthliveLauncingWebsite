@@ -1,7 +1,7 @@
 // // Show Blogs
 // const showBlogs = (function () {
 //     const blogsTemplate = async () => {
-//         const data = await fetch('http://localhost:3000/blogs');
+//         const data = await fetch('https://my-json-server.typicode.com/Tboss09/mcttYouthData/blogs');
 //         const blogs = await data.json();
 //         const blogsContainer = document.querySelector('.blog-container')
 
