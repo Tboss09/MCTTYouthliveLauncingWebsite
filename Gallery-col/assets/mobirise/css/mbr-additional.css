@@ -3075,7 +3075,7 @@ section.lazy-placeholder:after {
 .cid-sptA87aJ9W .mbr-slider .modal-body .close {
   background: #1b1b1b;
 }
-
+/* 
 .cid-sptA87aJ9W .mbr-gallery-item>div::before {
   content: '';
   position: absolute;
@@ -3088,7 +3088,7 @@ section.lazy-placeholder:after {
   -webkit-transition: 0.2s opacity ease-in-out;
   transition: 0.2s opacity ease-in-out;
   background: linear-gradient(to left, #4eb37b, #2a166f) !important;
-}
+} */
 
 .cid-sptA87aJ9W .mbr-gallery-item>div:hover .mbr-gallery-title::before {
   background: transparent !important;
