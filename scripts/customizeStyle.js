@@ -1,5 +1,4 @@
-// Slider
-let slickJs = (function () {
+let slickJs = () => {
     $('.slick').slick({
         dots: false,
         infinite: true,
@@ -38,7 +37,12 @@ let slickJs = (function () {
 
         ]
     })
-})()
+}
+
+
+
+
+// Slider
 // Slider
 
 
@@ -48,8 +52,7 @@ const showBlogs = (function () {
         const data = await fetch('https://tboss09.github.io/data/blogs.json');
         const blogs = await data.json();
         const blogsContainer = document.querySelector('.blog-container')
-        
-        console.log(blogs);
+
 
         // To show the blogs Out
         let template = ``;
@@ -58,9 +61,12 @@ const showBlogs = (function () {
         let url = window.location.pathname;
         let fileName = url.substring(url.lastIndexOf('/') + 1);
 
+
         if (fileName !== "blogs.html") {
             blogs.length = 3;
-        } //If we are not in the blog section, Then display only 3 Articles 
+        } //If we are not in the blog section, Then display only 3 Articles
+
+
 
         blogs.forEach(blog => {
             template += `
@@ -104,75 +110,6 @@ const showBlogs = (function () {
 let url = window.location.pathname;
 let fileName = url.substring(url.lastIndexOf('/') + 1);
 
-if (fileName == 'live.html') {
-    let curDay;
-    let secTime;
-    let ticker;
-
-    let youTubeVideoLiveEverySunday = document.querySelector('.js-youtube-video');
-    let videoCountdownLiveEverySunday = document.querySelector('.liveEverySundayCountdown');
-
-
-    function getSeconds() {
-        let nowDate = new Date();
-        let dy = 0; //Sunday through Saturday, 0 to 6        
-        var counterTime = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate(), 04, 53, 00); //20 out of 24 hours = 8pm
-        let curTime = nowDate.getTime(); //current time
-        let atime = counterTime.getTime(); //countdown time
-        let diff = parseInt((atime - curTime) / 1000);
-        if (diff > 0) { curDay = dy - nowDate.getDay() }
-        else { curDay = dy - nowDate.getDay() - 1 } //after countdown time
-        if (curDay < 0) { curDay += 7; } //already after countdown time, switch to next week
-        if (diff <= 0) { diff += (86400 * 7) }
-        startTimer(diff);
-    }
-
-    function startTimer(secs) {
-        secTime = parseInt(secs);
-        ticker = setInterval("tick()", 1000);
-        tick(); //initial count display
-    }
-
-    function tick() {
-        let secs = secTime;
-        if (secs >= 0) {
-            secTime--;
-            youTubeVideoLiveEverySunday.style.display = 'block';
-            videoCountdownLiveEverySunday.style.display = 'none';
-        }
-
-        else {
-            clearInterval(ticker);
-
-            youTubeVideoLiveEverySunday.style.display = 'block';
-            videoCountdownLiveEverySunday.style.display = 'none';
-            // console.log('hello,Are you there eee');
-            getSeconds(); //start over
-        }
-
-        let days = Math.floor(secs / 86400);
-        secs %= 86400;
-        let hours = Math.floor(secs / 3600);
-        secs %= 3600;
-        let mins = Math.floor(secs / 60);
-        secs %= 60;
-
-        // 2021/02/28 08:00:00
-
-        //update the time display
-        document.getElementById("days").innerHTML = `${curDay < 10 ? "0" : ''}${curDay}`;
-        document.getElementById("hours").innerHTML = ((hours < 10) ? "0" : "") + hours;
-        document.getElementById("minutes").innerHTML = ((mins < 10) ? "0" : "") + mins;
-        document.getElementById("seconds").innerHTML = ((secs < 10) ? "0" : "") + secs;
-    }
-
-
-    $(document).ready(function () {
-        getSeconds();
-    })
-
-}
-
 
 
 
@@ -187,11 +124,28 @@ const backButton = (function () {
                 e.preventDefault();
                 history.back();
             });
-            console.log(btn);
+            // console.log(btn);
             return;
         }
     });
 })()
 
 
-    // countDownToSundayTimer()
+// countDownToSundayTimer()
+
+
+$('document').ready(
+    slickJs()
+)
+
+// Live Countdown
+const watchLiveEverySundayCountdown = (() => {
+
+    let url = window.location.pathname;
+    let fileName = url.substring(url.lastIndexOf('/') + 1);
+
+    if (fileName == 'live.html') {
+        const countDownTimer = document.querySelector('.js-countdown-cont')
+        const liveSundayVideo = document.querySelector('.js-video1')
+    }
+})
