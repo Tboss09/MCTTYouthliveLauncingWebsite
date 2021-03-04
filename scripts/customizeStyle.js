@@ -138,14 +138,18 @@ $('document').ready(
     slickJs()
 )
 
+
+
 // Live Countdown
-const watchLiveEverySundayCountdown = (() => {
+const watchLiveEverySundayCountdown = (async () => {
+    const getDateFromServer = await fetch('https://tboss09.github.io/data/date.json')
+    const res = await getDateFromServer.json();
 
     let url = window.location.pathname;
     let fileName = url.substring(url.lastIndexOf('/') + 1);
 
+
     if (fileName == 'live.html') {
-        const countDownTimer = document.querySelector('.js-countdown-cont')
-        const liveSundayVideo = document.querySelector('.js-video1')
+        dateController.dataset.dueDate = `${res.date}`
     }
-})
+})()
