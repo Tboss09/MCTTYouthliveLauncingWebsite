@@ -1,3 +1,7 @@
+// 
+window.onload = function () { document.querySelector(".preloader").style.display = "none"; }
+
+
 let slickJs = () => {
     $('.slick').slick({
         dots: false,
@@ -151,7 +155,7 @@ const watchLiveEverySundayCountdown = (async () => {
     const videoRes = await getVideoLinkFromServer.json();
     // THis get the live Sunday Video
 
-    // THis controls the dachnagete
+    // THis controls the date
     const dateController = document.querySelector('.js-countdown');
     // THis controls the date
 
