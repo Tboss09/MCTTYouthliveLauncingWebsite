@@ -144,12 +144,35 @@ $('document').ready(
 const watchLiveEverySundayCountdown = (async () => {
     const getDateFromServer = await fetch('https://tboss09.github.io/data/date.json')
     const res = await getDateFromServer.json();
-
+    const dateController = document.querySelector('.js-countdown');
     let url = window.location.pathname;
     let fileName = url.substring(url.lastIndexOf('/') + 1);
-
 
     if (fileName == 'live.html') {
         dateController.dataset.dueDate = `${res.date}`
     }
 })()
+
+// Changing Logo Code Here   
+const changeLogoEverySecond = (function () {
+    let lastLogo;
+    const mcttYouthLogo = document.querySelector('.navbar-logo img')
+    const interChangingLogo = [`https://media.publit.io/file/logo-96x98.webp`, 'https://media.publit.io/file/red-mctt-logo.webp']
+
+    function randomLogo() {
+        const idx = Math.floor(Math.random() * interChangingLogo.length);
+        const logo = interChangingLogo[idx];
+        if (logo === lastLogo) { return randomLogo; }
+        mcttYouthLogo.src = logo;
+        mcttYouthLogo.style.transition = '0.3s ease';
+        lastLogo = logo;
+        return logo;
+    }
+
+
+
+
+    setInterval(randomLogo, 1500);
+
+})()
+// Changing Logo Code Here
