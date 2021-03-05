@@ -119,7 +119,7 @@ const backButton = (function () {
         document.querySelectorAll(".btn");
 
     allButton.forEach(btn => {
-        if (btn.innerHTML === "Back" || "Previous") {
+        if (btn.innerHTML === "Back") {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
                 history.back();
@@ -143,22 +143,41 @@ $('document').ready(
 // Live Countdown
 const watchLiveEverySundayCountdown = (async () => {
     const getDateFromServer = await fetch('https://tboss09.github.io/data/date.json')
+    const liveVideoSource = document.querySelector('.video-link')
+    const getVideoLinkFromServer = await fetch('https://tboss09.github.io/data/videoLink.json')
     const res = await getDateFromServer.json();
+
+    // THis get the live Sunday Video
+    const videoRes = await getVideoLinkFromServer.json();
+    // THis get the live Sunday Video
+
+    // THis controls the dachnagete
     const dateController = document.querySelector('.js-countdown');
+    // THis controls the date
+
     let url = window.location.pathname;
     let fileName = url.substring(url.lastIndexOf('/') + 1);
 
+    // if We are in the live.html folder then do this 
+
     if (fileName == 'live.html') {
+        liveVideoSource.src = `${videoRes.video}?rel=0&amp;enablejsapi=1`
         dateController.dataset.dueDate = `${res.date}`
+        liveVideoSource.src = "https://www.youtube.com/embed/IQDgJz6dQ9Y";
     }
 })()
+// if We are in the live.html folder then do this 
 
 // Changing Logo Code Here   
 const changeLogoEverySecond = (function () {
     let lastLogo;
     const mcttYouthLogo = document.querySelector('.navbar-logo img')
-    const interChangingLogo = [`https://media.publit.io/file/logo-96x98.webp`, 'https://media.publit.io/file/red-mctt-logo.webp']
+    const interChangingLogo = [`https://media.publit.io/file/logo-96x98.webp`,
+        'https://media.publit.io/file/red-mctt-logo.webp']
 
+    /* 
+    This generates the Random Logo on the website
+    */
     function randomLogo() {
         const idx = Math.floor(Math.random() * interChangingLogo.length);
         const logo = interChangingLogo[idx];
@@ -170,9 +189,15 @@ const changeLogoEverySecond = (function () {
     }
 
 
-
-
-    setInterval(randomLogo, 1500);
+    setInterval(randomLogo, 2000);
 
 })()
 // Changing Logo Code Here
+
+
+// YouTube  Video Link 
+const youTubeVideoLink = (async () => {
+    const youTubeVideoLink = await fetch('')
+    const res = await youTubeVideoLink.json();
+
+})()
