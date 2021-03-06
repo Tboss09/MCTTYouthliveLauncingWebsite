@@ -63,11 +63,6 @@ const imageCollection = async () => {
                 // Image Body
 
 
-                // Changes the Background Image  
-                document.querySelector('.cid-sptA85Uopb').style.backgroundImage
-                    = `url('https://media.publit.io/file/w_1280/${imgProperties["images"][3]}')`;
-                // Changes the Background Image  
-
             }
         }
     })
